@@ -1,0 +1,12 @@
+name: Second action
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get app code step
+        uses: actions/checkout@v3
+      - name: Install deps
+        run: npm run ci
+      - name: Run tests
+        run: npm run test
