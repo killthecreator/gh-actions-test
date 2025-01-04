@@ -1,12 +1,8 @@
 name: Second action
-on: push
+on: issues
 jobs:
-  test:
+  print-event-details:
     runs-on: ubuntu-latest
     steps:
-      - name: Get app code step
-        uses: actions/checkout@v3
-      - name: Install deps
-        run: npm ci
-      - name: Run tests
-        run: npm run test
+      - name: Print event details
+        run: echo "${{github.event_name}}"
