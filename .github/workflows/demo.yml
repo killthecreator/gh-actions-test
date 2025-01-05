@@ -13,7 +13,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~./.npm
-          key: deps-node-modules-${{hashFiles('**/pacckage-lock.json')}}
+          key: deps-node-modules-${{hashFiles('**/package-lock.json')}}
       - name: Install dependencies
         run: npm ci
       - name: Test code
@@ -29,7 +29,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~./.npm
-          key: deps-node-modules-${{hashFiles('**/pacckage-lock.json')}}
+          key: deps-node-modules-${{hashFiles('**/package-lock.json')}}
       - name: Install dependencies
         run: npm ci
       - name: Lint code
@@ -45,7 +45,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~./.npm
-          key: deps-node-modules-${{hashFiles('**/pacckage-lock.json')}}
+          key: deps-node-modules-${{hashFiles('**/package-lock.json')}}
       - name: Install dependencies
         run: npm ci
       - name: Build website
