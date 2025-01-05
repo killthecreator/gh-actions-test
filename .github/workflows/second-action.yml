@@ -1,8 +1,0 @@
-name: Second action
-on: issues
-jobs:
-  print-event-details:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Print event details
-        run: echo "${{github.action}}"
